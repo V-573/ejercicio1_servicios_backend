@@ -2,8 +2,8 @@ import { env } from './config/env.config.js';
 import { ServiceManager } from './managers/ServiceManager.js';
 import path from 'path';
 
-console.log(`🚀 Servidor configurado correctamente en modo: ${env.NODE_ENV}`);
-console.log(`🔌 Puerto asignado: ${env.PORT}\n`);
+console.log(`Servidor configurado correctamente en modo: ${env.NODE_ENV}`);
+console.log(`Puerto asignado: ${env.PORT}\n`);
 
 // Definimos la ruta absoluta al archivo JSON
 const jsonPath = path.resolve('src/data/services.json');
@@ -22,7 +22,7 @@ async function ejecutarPruebas() {
       category: "Odontología",
       available: true
     });
-    console.log("✅ Servicio 1 añadido:", s1);
+    console.log("Servicio 1 añadido:", s1);
 
 
 
@@ -34,7 +34,7 @@ async function ejecutarPruebas() {
       category: "Medicina",
       available: true
     });
-    console.log("✅ Servicio 2 añadido:", s2);
+    console.log("Servicio 2 añadido:", s2);
 
 
 
@@ -42,7 +42,7 @@ async function ejecutarPruebas() {
     // try {
     //   await manager.addService({ name: "Servicio Incompleto", price: 10000 });
     // } catch (error) {
-    //   console.log("🎯 Capturado error esperado:", error.message);
+    //   console.log("Capturado error esperado:", error.message);
     // }
 
 
@@ -53,33 +53,33 @@ async function ejecutarPruebas() {
 
     console.log("\n--- 4. Buscando servicio por ID (ID: 1) ---");
     const encontrado = await manager.getServiceById(1);
-    console.log("🔍 Encontrado:", encontrado);
+    console.log("Encontrado:", encontrado);
 
 
-//     console.log("\n--- 5. Actualizando un servicio (Modificando precio de ID: 1) ---");
-//     const actualizado = await manager.updateService(1, { price: 50000 });
-//     console.log("🔄 Servicio Actualizado:", actualizado);
+    console.log("\n--- 5. Actualizando un servicio (Modificando precio de ID: 1) ---");
+    const actualizado = await manager.updateService(1, { price: 50000 });
+    console.log("Servicio Actualizado:", actualizado);
 
 
-//     console.log("\n--- 6. Intentando alterar un ID en updateService (Debe fallar) ---");
-//     try {
-//       await manager.updateService(1, { id: 99 });
-//     } catch (error) {
-//       console.log("🎯 Capturado error esperado:", error.message);
-//     }
+    console.log("\n--- 6. Intentando alterar un ID en updateService (Debe fallar) ---");
+    try {
+      await manager.updateService(1, { id: 99 });
+    } catch (error) {
+      console.log("Capturado error esperado:", error.message);
+    }
 
 
-//     console.log("\n--- 7. Eliminando un servicio (ID: 2) ---");
-//     const eliminado = await manager.deleteService(2);
-//     console.log("🗑️ Servicio eliminado correctamente:", eliminado.name);
+    console.log("\n--- 7. Eliminando un servicio (ID: 2) ---");
+    const eliminado = await manager.deleteService(2);
+    console.log("🗑️ Servicio eliminado correctamente:", eliminado.name);
 
 
-//     console.log("\n--- 8. Verificación final del catálogo ---");
-//     const catalogoFinal = await manager.getServices();
-//     console.log(catalogoFinal);
+    console.log("\n--- 8. Verificación final del catálogo ---");
+    const catalogoFinal = await manager.getServices();
+    console.log(catalogoFinal);
 
   } catch (error) {
-    console.error("❌ Ocurrió un error inesperado durante el flujo:", error);
+    console.error("Ocurrió un error inesperado durante el flujo:", error);
   }
 }
 
