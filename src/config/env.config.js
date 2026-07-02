@@ -1,0 +1,24 @@
+import dotenv from 'dotenv';
+
+// Cargar las variables del archivo .env al objeto process.env
+dotenv.config();
+
+const requiredEnvs = ['PORT', 'NODE_ENV'];
+const missingEnvs = [];
+
+// Validar que existan
+requiredEnvs.forEach((envName) => {
+  if (!process.env[envName]) {
+    missingEnvs.push(envName);
+  }
+});
+
+if (missingEnvs.length > 0) {
+  console.error(`❌ ERROR CRÍTICO: Faltan las siguientes variables de entorno: ${missingEnvs.join(', ')}`);
+  process.exit(1); // Detiene la ejecución del nodo por completo
+}
+
+export const env = {
+  PORT: process.env.PORT,
+  NODE_ENV: process.env.NODE_ENV
+};

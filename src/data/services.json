@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Limpieza Dental Básica",
+    "description": "Limpieza con ultrasonido y pulido",
+    "duration": 45,
+    "price": 45000,
+    "category": "Odontología",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Consulta General",
+    "description": "Valoración médica de rutina",
+    "duration": 20,
+    "price": 30000,
+    "category": "Medicina",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Limpieza Dental Básica",
+    "description": "Limpieza con ultrasonido y pulido",
+    "duration": 45,
+    "price": 45000,
+    "category": "Odontología",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Consulta General",
+    "description": "Valoración médica de rutina",
+    "duration": 20,
+    "price": 30000,
+    "category": "Medicina",
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Limpieza Dental Básica",
+    "description": "Limpieza con ultrasonido y pulido",
+    "duration": 45,
+    "price": 45000,
+    "category": "Odontología",
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Consulta General",
+    "description": "Valoración médica de rutina",
+    "duration": 20,
+    "price": 30000,
+    "category": "Medicina",
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Limpieza Dental Básica",
+    "description": "Limpieza con ultrasonido y pulido",
+    "duration": 45,
+    "price": 45000,
+    "category": "Odontología",
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Consulta General",
+    "description": "Valoración médica de rutina",
+    "duration": 20,
+    "price": 30000,
+    "category": "Medicina",
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Limpieza Dental Básica",
+    "description": "Limpieza con ultrasonido y pulido",
+    "duration": 45,
+    "price": 45000,
+    "category": "Odontología",
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Consulta General",
+    "description": "Valoración médica de rutina",
+    "duration": 20,
+    "price": 30000,
+    "category": "Medicina",
+    "available": true
+  }
+]
