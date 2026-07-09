@@ -52,7 +52,7 @@ export const deleteService = async (req, res) => {
       message: `Servicio '${deletedService.name}' eliminado con éxito` 
     });
   } catch (error) {
-    res.status(404).json({ success: false, message: error.message });
+    res.status(400).json({ success: false, message: error.message });
   }
 };
 
