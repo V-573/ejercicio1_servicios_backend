@@ -19,11 +19,11 @@
   },
   {
     "id": 3,
-    "name": "Limpieza Dental Básica",
-    "description": "Limpieza con ultrasonido y pulido",
-    "duration": 45,
-    "price": 45000,
-    "category": "Odontología",
+    "name": "Consulta General",
+    "description": "limpieza trifasica",
+    "duration": 120,
+    "price": 130000,
+    "category": "cuerpo, mente y espiritu",
     "available": true
   },
   {

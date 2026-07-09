@@ -32,7 +32,6 @@ export const updateService = async (req, res) => {
   try {
     const { id } = req.params;
     
-    // Recuerda que el manager espera el ID como un Número
     const updatedService = await manager.updateService(parseInt(id), req.body);
     
     res.status(200).json({ success: true, data: updatedService });
@@ -56,3 +55,27 @@ export const deleteService = async (req, res) => {
     res.status(404).json({ success: false, message: error.message });
   }
 };
+
+// 5. obtener un servicio por id
+export const getServiceById = async (req, res) =>{
+
+    try {
+        const { id } = req.params;
+        console.log("esto es lo que agarra", id)
+        const serviceById = await manager.getServiceById(parseInt(id));
+        res.status(200).json({
+            success:true,
+            message:`servicio consultado: ${serviceById.name}`
+        })
+
+    } catch (error) {
+        res.status(404).json({success: false,
+            message:"servicio no existe"
+        })
+    }
+
+
+
+
+}
+
